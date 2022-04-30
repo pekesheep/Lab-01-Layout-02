@@ -1,0 +1,69 @@
+@import "theme-1";
+// @import "theme-2";
+
+div.container-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.base {
+    width: 100px;
+    height: 80px;
+    padding: 10px;
+    background-color: $base-color;
+
+    &>span {
+        font: {
+            weight: bold;
+            size: 1.25em;
+        }
+    }
+}
+
+.important {
+    @extend .base;
+    background-color: darken($base-color,30);
+
+    &>span {
+        font: {
+            weight: bold;
+            size: 1.25em;
+        }
+    }
+}
+
+.warning {
+    @extend .base;
+    background-color: lighten($base-color,30);
+
+    &>span {
+        font: {
+            weight: bold;
+            size: 1.25em;
+        }
+    }
+}
+
+.main-font {
+    font-family: $main-font-family;
+}
+
+.secondary-font {
+    font-family: $sec-font-family
+}
+
+.box {
+    @extend .base;
+    background-color: white;
+    border: 2px solid darkgray;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+
+    &>span {
+        font: {
+            weight: bold;
+            size: 1.25em;
+        }
+    }
+}
